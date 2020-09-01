@@ -44,3 +44,5 @@
   "rename a yakuake tab specified by session id"
   (yakuake-call-tab-method "setTabTitle" :int32 session title)
   )
+
+(provide 'emacs-yakuake)
