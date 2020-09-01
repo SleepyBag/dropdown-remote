@@ -1,3 +1,9 @@
+;;; emacs-yakuake.el --- Manipulate yakuake in Emacs
+;;; Version: 1.0
+;;; Commentary:
+;;; manipulate yakuake in emacs
+;;; Code:
+
 (defvar yakuake-dbus-service "org.kde.yakuake")
 (defvar yakuake-dbus-interface "org.kde.yakuake")
 (defvar yakuake-session-dbus-path "/yakuake/sessions")
@@ -46,3 +52,5 @@
   )
 
 (provide 'emacs-yakuake)
+
+;;; emacs-yakuake.el ends here
