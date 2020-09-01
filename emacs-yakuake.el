@@ -8,6 +8,7 @@
 (defvar yakuake-dbus-interface "org.kde.yakuake")
 (defvar yakuake-session-dbus-path "/yakuake/sessions")
 (defvar yakuake-tab-dbus-path "/yakuake/tabs")
+(defvar yakuake-window-dbus-path "/yakuake/window")
 
 (defun yakuake-call-session-method (method &rest args)
   (apply 'dbus-call-method :session yakuake-dbus-service yakuake-session-dbus-path yakuake-dbus-interface method args)
@@ -15,6 +16,10 @@
 
 (defun yakuake-call-tab-method (method &rest args)
   (apply 'dbus-call-method :session yakuake-dbus-service yakuake-tab-dbus-path yakuake-dbus-interface method args)
+  )
+
+(defun yakuake-call-window-method (method &rest args)
+  (apply 'dbus-call-method :session yakuake-dbus-service yakuake-window-dbus-path yakuake-dbus-interface method args)
   )
 
 (defun yakuake-add-session ()
@@ -49,6 +54,12 @@
 (defun yakuake-set-tab-title (session title)
   "rename a yakuake tab specified by session id"
   (yakuake-call-tab-method "setTabTitle" :int32 session title)
+  )
+
+(defun yakuake-toggle-window ()
+  "toggle yakuake window visibility"
+  (interactive)
+  (yakuake-call-window-method "toggleWindowState")
   )
 
 (provide 'emacs-yakuake)
