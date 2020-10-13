@@ -2,8 +2,8 @@
 
 ;; Author: Xue Qianming
 ;; Maintainer: Xue Qianming
-;; Version: version
-;; Package-Requires: (dependencies)
+;; Version: 1.0
+;; Package-Requires:
 ;; Homepage: https://github.com/SleepyBag/dropdown-remote
 ;; Keywords: dropdown, terminal, yakuake, guake
 
