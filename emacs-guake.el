@@ -4,9 +4,6 @@
 ;;; manipulate guake in emacs
 ;;; Code:
 
-(require 'emacs-guake)
-(require 'emacs-yakuake)
-
 (defvar guake-dbus-service "org.guake3.RemoteControl")
 (defvar guake-dbus-interface "org.guake3.RemoteControl")
 (defvar guake-dbus-path "/org/guake3/RemoteControl")

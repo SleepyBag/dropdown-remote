@@ -29,6 +29,9 @@
 
 ;;; Code:
 
+(require 'emacs-guake)
+(require 'emacs-yakuake)
+
 (defvar dropdown-terminal 'yakuake)
 
 ;; ----------------- Main Window Functions -------------------------------------
