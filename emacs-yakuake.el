@@ -1,9 +1,3 @@
-;;; emacs-yakuake.el --- Manipulate yakuake in Emacs
-;;; Version: 1.0
-;;; Commentary:
-;;; manipulate yakuake in emacs
-;;; Code:
-
 (defvar yakuake-dbus-service "org.kde.yakuake")
 (defvar yakuake-dbus-interface "org.kde.yakuake")
 (defvar yakuake-session-dbus-path "/yakuake/sessions")
@@ -66,6 +60,11 @@
   (yakuake-call-tab-method "setTabTitle" :int32 session title)
   )
 
+(defun yakuake-active-session-id ()
+  "get current session id"
+  (yakuake-call-session-method "activeSessionId")
+  )
+
 ;; ----------------- Terminal Functions ----------------------------------------
 (defun yakuake-get-terminal-ids-in-session (session)
   "get the terminals in a specified session"
@@ -90,6 +89,9 @@
   (yakuake-call-session-method "splitTerminalLeftRight" :int32 session)
   )
 
-(provide 'emacs-yakuake)
+(defun yakuake-active-terminal-id ()
+  "get current terminal id"
+  (yakuake-call-session-method "activeTerminalId")
+  )
 
-;;; emacs-yakuake.el ends here
+(provide 'emacs-yakuake)

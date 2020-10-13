@@ -1,8 +1,11 @@
-;;; emacs-yakuake.el --- Manipulate yakuake in Emacs
+;;; emacs-guake.el --- Manipulate guake in Emacs
 ;;; Version: 1.0
 ;;; Commentary:
-;;; manipulate yakuake in emacs
+;;; manipulate guake in emacs
 ;;; Code:
+
+(require 'emacs-guake)
+(require 'emacs-yakuake)
 
 (defvar guake-dbus-service "org.guake3.RemoteControl")
 (defvar guake-dbus-interface "org.guake3.RemoteControl")
@@ -61,6 +64,6 @@
   (guake-call-method "v_split_current_terminal")
   )
 
-(provide 'emacs-yakuake)
+(provide 'emacs-guake)
 
 ;;; emacs-yakuake.el ends here
