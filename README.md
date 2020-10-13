@@ -1,4 +1,4 @@
-# emacs-yakuake
-Manipulate yakuake in Emacs
+# dropdown-remote
+Manipulate dropdown terminals in Emacs
 
-This is just an wrapper of D-Bus interface of yakuake. Just view the code for the functions you need.
+This is a wrapper of D-Bus interface of yakuake and guake. Just view the code for the functions you need.
