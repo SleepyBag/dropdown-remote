@@ -18,7 +18,7 @@ You are access yakuake and guake from a uniformed interface in Emacs through thi
 ### Tab Functions
 
 | name                        | function                             |
-|-----------------------------+--------------------------------------|
+|-----------------------------|--------------------------------------|
 | dropdown-current-tab        | get the id of current tab            |
 | dropdown-add-tab            | create a tab and get its id          |
 | dropdown-close-tab          | close a tab by its id                |
