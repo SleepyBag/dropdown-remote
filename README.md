@@ -9,20 +9,21 @@ You are access yakuake and guake from a uniformed interface in Emacs through thi
 
 ### Main Functions
 
+| name                                | function                                        |
+|-------------------------------------|-------------------------------------------------|
 | dropdown-toggle-window              | show or hide a dropdown terminal                |
 | dropdown-close-current-tab          | close current tab of dropdown terminal          |
 | dropdown-run-command-in-current-tab | run command in current tab of dropdown terminal |
 
 ### Tab Functions
 
+| name                        | function                             |
+|-----------------------------+--------------------------------------|
 | dropdown-current-tab        | get the id of current tab            |
 | dropdown-add-tab            | create a tab and get its id          |
 | dropdown-close-tab          | close a tab by its id                |
 | dropdown-run-command-in-tab | run command in a specific tab        |
 | dropdown-set-tab-title      | rename the title of the specific tab |
-
-
-
 
 ## Configuration
 
