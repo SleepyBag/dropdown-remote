@@ -25,7 +25,7 @@
 
 
 ;;; Commentary:
-;;; manipulate dropdown terminals in emacs
+;;; manipulate dropdown terminals in Emacs
 
 ;;; Code:
 
@@ -36,7 +36,7 @@
 
 ;; ----------------- Main Window Functions -------------------------------------
 (defun dropdown-toggle-window ()
-  "show or hide a dropdown terminal"
+  "Show or hide a dropdown terminal."
   (interactive)
   (case dropdown-terminal
     ('yakuake (yakuake-toggle-window))
@@ -45,18 +45,19 @@
   )
 
 (defun dropdown-close-current-tab ()
-  "close current tab of dropdown terminal"
+  "Close current tab of dropdown terminal."
   (interactive)
   (dropdown-close-tab (dropdown-current-tab))
   )
 
 (defun dropdown-run-command-in-current-tab (command)
-  "run command in current tab of dropdown terminal"
+  "Run COMMAND in current tab of dropdown terminal."
   (dropdown-run-command-in-tab (dropdown-current-tab) command)
   )
 
 ;; ----------------- Tab Functions ---------------------------------------------
 (defun dropdown-current-tab ()
+  "Get the id of current tab."
   (case dropdown-terminal
     ('yakuake (yakuake-active-session-id))
     ('guake (guake-get-selected-uuid-tab))
@@ -64,7 +65,7 @@
   )
 
 (defun dropdown-add-tab ()
-  "create a tab and get its id"
+  "Create a tab and get its id."
   (interactive)
   (case dropdown-terminal
     ('yakuake (yakuake-add-session))
@@ -73,7 +74,7 @@
   )
 
 (defun dropdown-close-tab (tab)
-  "close a tab by its id"
+  "Close a TAB by its id."
   (case dropdown-terminal
     ('yakuake (yakuake-remove-session tab))
     ('guake (message "guake doesn't support remove tab through D-Bus interface yet"))
@@ -81,7 +82,7 @@
   )
 
 (defun dropdown-run-command-in-tab (tab command)
-  "run command in a specific tab"
+  "Run COMMAND in a specific TAB."
   (case dropdown-terminal
     ('yakuake (yakuake-run-command-in-session tab command))
     ('guake (guake-run-command-in-tab tab command))
@@ -89,7 +90,7 @@
   )
 
 (defun dropdown-set-tab-title (tab title)
-  "rename the title of the specific tab"
+  "Rename the TITLE of the specific TAB."
   (case dropdown-terminal
     ('yakuake (yakuake-set-tab-title tab title))
     ('guake (guake-rename-tab-uuid tab title))
