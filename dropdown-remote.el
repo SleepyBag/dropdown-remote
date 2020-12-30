@@ -102,7 +102,7 @@
   "Run a dropdown terminal from current directory"
   (interactive)
   (let ((tab (dropdown-add-tab)))
-    (dropdown-run-command-in-tab tab (concat "cd " default-directory))
+    (dropdown-run-command-in-tab tab (concat "cd '" default-directory "'"))
     (dropdown-toggle-window)
     tab
     )
